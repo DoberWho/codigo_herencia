@@ -1,0 +1,10 @@
+package codigo.db;
+
+public abstract class DbObject {
+	private int id = 0;
+	
+	public int getId() {
+		return this.id;
+	}
+	
+}

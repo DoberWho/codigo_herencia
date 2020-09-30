@@ -1,0 +1,2 @@
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>ADD\: Conexi\u00F3n \=&gt; SELECT + SELECT Where</message>\r\n<message>ADD\: Consultar \=&gt; Update</message>\r\n<message>ADD\: Funci\u00F3n Insertar</message>\r\n<message>ADD\: Conexion \=&gt; Conexion SQLITE&\#x0A;- Funciones CRUD</message>\r\n<message>ADD\: conector \=&gt; SQlite+Mysql</message>\r\n<message>MOD\: Fichero \=&gt; Conexion</message>\r\n<message>ADD\: Nuevos Ficheros</message>\r\n</messages>
+eclipse.preferences.version=1

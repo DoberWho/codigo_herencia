@@ -1,0 +1,8 @@
+package codigo.models.mamifero;
+
+import codigo.models.Animal;
+
+public abstract class Mamifero extends Animal{
+
+	public void mama() {}
+}

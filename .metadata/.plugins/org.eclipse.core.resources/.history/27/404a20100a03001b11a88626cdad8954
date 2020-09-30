@@ -1,0 +1,11 @@
+package codigo.models.mamifero;
+
+public class Delfin extends Mamifero{
+
+	public void nadar() {}
+
+	@Override
+	public void mama() {
+		 System.out.println("Como Puede");
+	}
+}

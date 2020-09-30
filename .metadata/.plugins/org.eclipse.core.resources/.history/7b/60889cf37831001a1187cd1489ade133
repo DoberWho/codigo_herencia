@@ -1,0 +1,49 @@
+package com.ubu.ws;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.jws.WebService;
+
+import com.ubu.models.Participaciones;
+import com.ubu.models.dao.ParticipacionesDAO;
+import com.ubu.models.dao.common.GenericDAO;
+
+//Service Implementation
+@WebService(endpointInterface = "com.ubu.ws.ActividadesGimnasio")
+public class ActividadesGimnasioImpl implements ActividadesGimnasio {
+
+	@Override
+	public String getHelloWorldAsString(String name) {
+		return "Testing " + name;
+	}
+
+	@Override
+	public float consultarMediaPuntuacionActividades() {
+
+		List<GenericDAO> daoItems = (new ParticipacionesDAO()).list();
+		
+		int count  = daoItems.size();
+		Long sumVal = 0;
+		
+		for (GenericDAO dao : daoItems) {
+			Participaciones item = (Participaciones) dao.getItem();
+			sumVal = sumVal + item.getVotacion();
+		}
+
+		return 0;
+	}
+
+	@Override
+	public int consultarPlazasLibresActividad(int idActividad) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int consultarNumeroInscritosActividad(int idActividad) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

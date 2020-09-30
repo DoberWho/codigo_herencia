@@ -1,0 +1,16 @@
+1578349124123	Rename package 'com.mkyong'
+1578349135176	Rename package 'com.mkyong'
+1578349148835	Rename package 'com.mkyong.client'
+1578349161022	Rename package 'com.mkyong.endpoint'
+1578349172382	Rename package 'com.mkyong.ws'
+1578349184432	Rename package 'com.mkyong.ws.jaxws'
+1578388344769	Rename type 'HelloWorld'
+1578388356244	Rename type 'HelloWorldImpl'
+1578389453667	Rename type 'HelloWorldPublisher'
+1578389472692	Rename type 'HelloWorldClient'
+1578419358177	Delete element
+1578419424953	Rename package 'com.ubu.actividades.models'
+1578419433734	Rename package 'com.ubu.actividades.models.dao'
+1578419442094	Rename package 'com.ubu.actividades.models.dao.common'
+1578419896673	Copy compilation unit
+1578419905919	Rename type 'Participaciones'

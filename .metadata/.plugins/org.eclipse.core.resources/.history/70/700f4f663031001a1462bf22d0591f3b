@@ -1,0 +1,14 @@
+package com.ubu.endpoint;
+ 
+import javax.xml.ws.Endpoint;
+
+import com.ubu.ws.ActividadesGimnasioImpl;
+ 
+//Endpoint publisher
+public class HelloWorldPublisher{
+ 
+	public static void main(String[] args) {
+	   Endpoint.publish("http://localhost:9999/ws/actividades", new ActividadesGimnasioImpl());
+    }
+ 
+}

@@ -1,0 +1,94 @@
+package com.ubu.models.dao;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Participaciones {
+
+	private SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+
+	Long id;
+
+	private Date created;
+
+	private Long idUsuario;
+
+	private Long idActividad;
+
+	private Long modoPago;
+
+	private String sugerencia;
+
+	private String votacion;
+
+	private String comentarios;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Date getCreated() {
+		return created;
+	}
+
+	public void setCreated(Date created) {
+		this.created = created;
+	}
+
+	public String getCreatedLabel() {
+		return formatter.format(this.created);
+	}
+
+	public Long getIdActividad() {
+		return idActividad;
+	}
+
+	public void setIdActividad(Long idActividad) {
+		this.idActividad = idActividad;
+	}
+
+	public Long getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(Long idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+
+	public Long getModoPago() {
+		return modoPago;
+	}
+
+	public void setModoPago(Long modoPago) {
+		this.modoPago = modoPago;
+	}
+
+	public String getSugerencia() {
+		return sugerencia;
+	}
+
+	public void setSugerencia(String sugerencia) {
+		this.sugerencia = sugerencia;
+	}
+
+	public String getVotacion() {
+		return votacion;
+	}
+
+	public void setVotacion(String votacion) {
+		this.votacion = votacion;
+	}
+
+	public String getComentarios() {
+		return comentarios;
+	}
+
+	public void setComentarios(String comentarios) {
+		this.comentarios = comentarios;
+	}
+
+}

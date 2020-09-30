@@ -1,0 +1,6 @@
+package codigo.models.lagarto;
+
+public class Salmandra extends Lagarto {
+
+	public void envenena() {}
+}

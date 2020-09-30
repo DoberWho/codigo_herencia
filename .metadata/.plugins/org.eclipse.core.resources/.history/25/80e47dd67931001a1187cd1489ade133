@@ -1,0 +1,110 @@
+package com.ubu.models.dao.common;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
+public abstract class GenericDAO {
+	
+	private DbController db = DbController.getInstance();
+
+	public abstract Long getId();
+
+	public abstract boolean isNew();
+
+	/**
+	 * 
+	 * @return Devuelve el nombre de la tabla de la base de datos del Objecto.
+	 */
+	public abstract String getTable();
+
+	/**
+	 * 
+	 * @return Devuelve el String/Array de los campos de la base de datos
+	 */
+	public abstract String getCampos();
+
+	public abstract String getValues();
+
+	public abstract GenericDAO getObject(ResultSet res) throws SQLException;
+
+	/**
+	 * @return Devuelve el Objecto de Tipo en lugar del DAO
+	 */
+	public abstract Object getItem();
+
+	// CREATE - UPDATE
+	public GenericDAO save() {
+		return db.saveDb(this);
+	}
+
+	// DELETE
+	public void delete() {
+		db.deleteDb(this);
+	}
+
+	// READ
+	public List<GenericDAO> list() {
+		return db.list(this);
+	}
+
+	// READ BY
+	public GenericDAO getByid(Integer id) {
+		return db.getByid(this, id);
+	}
+
+	// Find BY
+	public GenericDAO findByObj() {
+		return db.findByObj(this);
+	}
+
+	// Find BY
+	public List<GenericDAO> listByObj() {
+		return db.listByObj(this);
+	}
+
+	private boolean isNullOrEmpty(Object value) {
+		if (value == null) {
+			return true;
+		}
+
+		if (value instanceof String) {
+			if (((String) value).trim().isEmpty()) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	public String getCorrectCampos(String data, String campo, Object value) {
+		if (isNullOrEmpty(data)) {
+			data = "";
+		}
+		if (isNullOrEmpty(value)) {
+			return data;
+		}
+
+		if (data.isEmpty()) {
+			return "" + campo;
+		}
+
+		return data + "," + campo;
+	}
+
+	public String getCorrectValues(String data, Object value) {
+		if (isNullOrEmpty(data)) {
+			data = "";
+		}
+		if (isNullOrEmpty(value)) {
+			return data;
+		}
+
+		if (data == null || data.isEmpty()) {
+			return "'" + value + "'";
+		}
+
+		return data + ",'" + value + "'";
+	}
+
+}

@@ -1,0 +1,13 @@
+package codigo.models.mamifero;
+
+import codigo.models.Animal;
+
+public abstract class Mamifero extends Animal{
+
+	public void mama() {}
+	
+	@Override
+	public boolean estaVivo() {
+		return (vida > 0);
+	}
+}

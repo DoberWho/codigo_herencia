@@ -1,0 +1,40 @@
+package com.ubu.client;
+
+import java.net.URL;
+
+import javax.xml.namespace.QName;
+import javax.xml.ws.Service;
+
+import org.joda.time.DateTime;
+
+import com.ubu.ws.ActividadesGimnasio;
+
+public class ActividadesGimnasioClient {
+
+	public static void main(String[] args) throws Exception {
+ 
+		URL url = new URL("http://localhost:9999/ws/actividades?wsdl");
+ 
+        //1st argument service URI, refer to wsdl document above
+		//2nd argument is service name, refer to wsdl document above
+        QName qname = new QName("http://ws.ubu.com/", "ActividadesGimnasioImplService");
+ 
+        Service service = Service.create(url, qname);
+ 
+        ActividadesGimnasio client = service.getPort(ActividadesGimnasio.class);
+        
+        DateTime fIni = Date
+ 
+        System.out.println(""+client.getHelloWorldAsString("hello World"));
+        System.out.println(""+client.consultarActividadesConPlazas());
+        System.out.println(""+client.consultarActividadesConPlazasLibres());
+        System.out.println(""+client.consultarActividadMejorPuntuada());
+        System.out.println(""+client.consultarMediaPuntuacionActividades());
+        System.out.println(""+client.consultarPlazasLibresActividad());
+        System.out.println(""+client.consultarNumeroInscritosActividad());
+        System.out.println(""+client.consultar());
+        
+ 
+    }
+
+}

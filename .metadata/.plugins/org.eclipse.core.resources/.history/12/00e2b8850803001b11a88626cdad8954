@@ -1,0 +1,6 @@
+package codigo.models.mamifero;
+
+public class Delfin extends Mamifero{
+
+	public void nadar() {}
+}

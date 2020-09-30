@@ -1,0 +1,127 @@
+package com.ubu.models.dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import com.ubu.models.Fichero;
+import com.ubu.models.dao.common.GenericDAO;
+
+public class FicheroDAO extends GenericDAO {
+
+	private static final String TABLE = "ficheros";
+
+	private SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+
+	private Integer id;
+	private Date created;
+	public String titulo;
+	public String ruta;
+	public Integer idActividad;
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Date getCreated() {
+		return created;
+	}
+
+	public void setCreated(Date created) {
+		this.created = created;
+	}
+
+	public String getCreatedLabel() {
+		return formatter.format(this.created);
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public String getRuta() {
+		return ruta;
+	}
+
+	public void setRuta(String ruta) {
+		this.ruta = ruta;
+	}
+
+	public Integer getIdActividad() {
+		return idActividad;
+	}
+
+	public void setIdActividad(Integer idActividad) {
+		this.idActividad = idActividad;
+	}
+
+	@Override
+	public Long getId() {
+		return this.id;
+	}
+
+	@Override
+	public boolean isNew() {
+		return (this.id == null);
+	}
+
+	@Override
+	public String getTable() {
+		return TABLE;
+	}
+
+	@Override
+	public String getCampos() {
+		String campos = "";
+		campos = getCorrectCampos(campos, "titulo", this.titulo);
+		campos = getCorrectCampos(campos, "ruta", this.ruta);
+		campos = getCorrectCampos(campos, "id_actividad", this.idActividad);
+		return campos;
+	}
+
+	@Override
+	public String getValues() {
+		String value = "";
+		value = getCorrectValues(value, this.titulo);
+		value = getCorrectValues(value, this.ruta);
+		value = getCorrectValues(value, this.idActividad);
+		return value;
+	}
+
+	@Override
+	public GenericDAO getObject(ResultSet res) throws SQLException {
+
+		FicheroDAO item = new FicheroDAO();
+		item.id = res.getInt("id");
+
+		item.created = res.getDate("created");
+
+		item.titulo = res.getString("titulo");
+		item.ruta = res.getString("ruta");
+
+		item.idActividad = res.getInt("id_actividad");
+
+		return item;
+	}
+
+	@Override
+	public Fichero getItem() {
+
+		Fichero item = new Fichero();
+		
+		item.setId(this.id);
+		item.setCreated(this.created);
+		item.setTitulo(this.titulo);
+		item.setRuta(this.ruta);
+		item.setIdActividad(this.idActividad);
+
+		return item;
+
+	}
+
+}

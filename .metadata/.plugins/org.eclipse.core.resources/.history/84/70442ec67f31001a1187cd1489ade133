@@ -1,0 +1,142 @@
+package com.ubu.models;
+
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.joda.time.DateTime;
+
+public class Actividad implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3612574557867269721L;
+
+	private SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+
+	private Long id;
+	private Date created;
+	private String titulo;
+	private String descripcion;
+	private String recomendaciones;
+	private String docente;
+	private Integer diaSemana;
+	private String horario;
+	private Date fechaInicio;
+	private Date fechaFin;
+
+	public Date getCreated() {
+		return created;
+	}
+
+	public void setCreated(Date created) {
+		this.created = created;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public String getRecomendaciones() {
+		return recomendaciones;
+	}
+
+	public void setRecomendaciones(String recomendaciones) {
+		this.recomendaciones = recomendaciones;
+	}
+
+	public String getDocente() {
+		return docente;
+	}
+
+	public void setDocente(String docente) {
+		this.docente = docente;
+	}
+
+	public Integer getDiaSemana() {
+		return diaSemana;
+	}
+
+	public void setDiaSemana(Integer diaSemana) {
+		this.diaSemana = diaSemana;
+	}
+
+	public String getDiaSemanaLabel() {
+		switch (diaSemana) {
+		case 6:
+			return "Domingo";
+		case 5:
+			return "Sabado";
+		case 4:
+			return "Viernes";
+		case 3:
+			return "Jueves";
+		case 2:
+			return "Miercoles";
+		case 1:
+			return "Martes";
+		case 0:
+		default:
+			return "Lunes";
+		}
+	}
+
+	public String getHorario() {
+		return horario;
+	}
+
+	public void setHorario(String horario) {
+		this.horario = horario;
+	}
+
+	public Date getFechaInicio() {
+		return fechaInicio;
+	}
+
+	public void setFechaInicio(Date fechaInicio) {
+		this.fechaInicio = fechaInicio;
+	}
+	
+	public String getFechaInicioLabel() {
+		return formatter.format(this.fechaInicio);
+	}
+
+	public Date getFechaFin() {
+		return fechaFin;
+	}
+
+	public void setFechaFin(Date fechaFin) {
+		this.fechaFin = fechaFin;
+	}
+	
+	public String getFechaFinLabel() {
+		return formatter.format(this.fechaFin);
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getId() {
+		return this.id;
+	}
+
+	public boolean enFecha(DateTime fechaInicio2, DateTime fechaFin2) {
+		// TODO Auto-generated method stub
+		return false;
+	} 
+
+}

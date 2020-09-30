@@ -1,0 +1,46 @@
+package com.ubu.ws;
+
+import java.util.List;
+
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
+import javax.jws.soap.SOAPBinding.Style;
+import javax.jws.soap.SOAPBinding.Use;
+
+import org.joda.time.DateTime;
+
+import com.ubu.models.Actividad;
+
+//Service Endpoint Interface
+@WebService
+@SOAPBinding(style = Style.DOCUMENT, use = Use.LITERAL)
+public interface ActividadesGimnasio {
+
+	@WebMethod
+	String getHelloWorldAsString(String name);
+	@WebMethod
+	public List<Actividad> consultarActividadesConPlazas();
+
+	// public List<Actividad> consultarActividadesConPlazasLibres(DateTime
+	// fechaInicio, DateTime fechaFin);
+	@WebMethod
+	public Actividad consultarActividadMejorPuntuada();
+	@WebMethod
+	public Actividad consultarActividadMejorPuntuada(DateTime fechaInicio, DateTime fechaFin);
+
+	@WebMethod
+	public float consultarMediaPuntuacionActividades();
+	@WebMethod
+	public float consultarMediaPuntuacionActividades(DateTime fechaInicio, DateTime fechaFin);
+
+	@WebMethod
+	public int consultarPlazasLibresActividad(int idActividad);
+
+	@WebMethod
+	public int consultarNumeroInscritosActividad(int idActividad);
+
+	
+	// public List<String> consultar();
+
+}

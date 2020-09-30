@@ -1,0 +1,5 @@
+package codigo.db;
+
+public abstract class DbObject {
+	private int id = 0;
+}

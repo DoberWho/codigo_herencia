@@ -1,0 +1,13 @@
+package codigo.models.mamifero;
+
+import codigo.models.interfaces.PuedeNadar;
+
+public class Delfin extends Mamifero implements PuedeNadar{
+
+	public void nadar() {}
+
+	@Override
+	public void mama() {
+		 System.out.println("Como Puede");
+	}
+}

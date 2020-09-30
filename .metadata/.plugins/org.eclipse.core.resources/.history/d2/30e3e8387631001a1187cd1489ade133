@@ -1,0 +1,188 @@
+package com.ubu.models.dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import com.ubu.actividades.models.dao.common.GenericDAO;
+import com.ubu.models.Actividad;
+
+public class ActividadDAO extends GenericDAO {
+
+	private static final String TABLE = "actividades";
+
+	private Integer id;
+	private Date created;
+	private String titulo;
+	private String descripcion;
+	private String recomendaciones;
+	private String docente;
+	private Integer diaSemana;
+	private String horario;
+	private Date fechaInicio;
+	private Date fechaFin;
+
+	public Date getCreated() {
+		return created;
+	}
+
+	public void setCreated(Date created) {
+		this.created = created;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public String getRecomendaciones() {
+		return recomendaciones;
+	}
+
+	public void setRecomendaciones(String recomendaciones) {
+		this.recomendaciones = recomendaciones;
+	}
+
+	public String getDocente() {
+		return docente;
+	}
+
+	public void setDocente(String docente) {
+		this.docente = docente;
+	}
+
+	public Integer getDiaSemana() {
+		return diaSemana;
+	}
+
+	public void setDiaSemana(Integer diaSemana) {
+		this.diaSemana = diaSemana;
+	}
+
+	public String getHorario() {
+		return horario;
+	}
+
+	public void setHorario(String horario) {
+		this.horario = horario;
+	}
+
+	public Date getFechaInicio() {
+		return fechaInicio;
+	}
+
+	public void setFechaInicio(Date fechaInicio) {
+		this.fechaInicio = fechaInicio;
+	}
+
+	public Date getFechaFin() {
+		return fechaFin;
+	}
+
+	public void setFechaFin(Date fechaFin) {
+		this.fechaFin = fechaFin;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	@Override
+	public Integer getId() {
+		return this.id;
+	}
+
+	@Override
+	public boolean isNew() {
+		return (this.id == null);
+	}
+
+	@Override
+	public String getTable() {
+		return TABLE;
+	}
+
+	@Override
+	public String getCampos() {
+		String campos = "";
+		campos = getCorrectCampos(campos, "titulo", this.titulo);
+		campos = getCorrectCampos(campos, "descripcion", this.descripcion);
+		campos = getCorrectCampos(campos, "recomendaciones", this.recomendaciones);
+		campos = getCorrectCampos(campos, "docente", this.docente);
+		campos = getCorrectCampos(campos, "dia_semana", this.diaSemana);
+		campos = getCorrectCampos(campos, "horario", this.horario);
+		campos = getCorrectCampos(campos, "fecha_inicio", this.fechaInicio);
+		campos = getCorrectCampos(campos, "fecha_fin", this.fechaFin);
+		return campos;
+	}
+
+	@Override
+	public String getValues() {
+		String value = "";
+		value = getCorrectValues(value, this.titulo);
+		value = getCorrectValues(value, this.descripcion);
+		value = getCorrectValues(value, this.recomendaciones);
+		value = getCorrectValues(value, this.docente);
+		value = getCorrectValues(value, this.diaSemana);
+		value = getCorrectValues(value, this.horario);
+		
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd");
+		value = getCorrectValues(value, formatter.format(this.fechaInicio) );
+		value = getCorrectValues(value, formatter.format(this.fechaFin) );
+		
+		return value;
+	}
+
+	@Override
+	public GenericDAO getObject(ResultSet res) throws SQLException {
+
+		ActividadDAO item = new ActividadDAO();
+		item.id = res.getInt("id");
+
+		item.created = res.getDate("created");
+
+		item.titulo = res.getString("titulo");
+		item.descripcion = res.getString("descripcion");
+		item.recomendaciones = res.getString("recomendaciones");
+		item.docente = res.getString("docente");
+
+		item.diaSemana = res.getInt("dia_semana");
+		item.horario = res.getString("horario");
+
+		item.fechaInicio = res.getDate("fecha_inicio");
+		item.fechaFin = res.getDate("fecha_fin");
+
+		return item;
+	}
+
+	@Override
+	public Actividad getItem() {
+
+		Actividad item = new Actividad();
+		item.setCreated(this.created);
+		item.setDescripcion(this.descripcion);
+		item.setDiaSemana(this.diaSemana);
+		item.setDocente(this.docente);
+		item.setFechaFin(this.fechaFin);
+		item.setFechaInicio(this.fechaInicio);
+		item.setHorario(this.horario);
+		item.setId(this.id);
+		item.setRecomendaciones(this.recomendaciones);
+		item.setTitulo(this.titulo);
+
+		return item;
+	}
+
+}

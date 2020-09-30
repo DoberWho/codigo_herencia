@@ -1,0 +1,62 @@
+package com.ubu.ws;
+
+import java.util.List;
+
+import javax.jws.WebService;
+
+import com.ubu.models.Actividad;
+import com.ubu.models.Participaciones;
+import com.ubu.models.dao.ActividadDAO;
+import com.ubu.models.dao.ParticipacionesDAO;
+import com.ubu.models.dao.common.GenericDAO;
+
+//Service Implementation
+@WebService(endpointInterface = "com.ubu.ws.ActividadesGimnasio")
+public class ActividadesGimnasioImpl implements ActividadesGimnasio {
+
+	@Override
+	public String getHelloWorldAsString(String name) {
+		return "Testing " + name;
+	}
+
+	@Override
+	public float consultarMediaPuntuacionActividades() {
+
+		List<GenericDAO> daoItems = (new ParticipacionesDAO()).list();
+		if (daoItems == null || daoItems.isEmpty()) {
+			return 0;
+		}
+
+		int count = daoItems.size();
+		Long sumVal = 0L;
+
+		for (GenericDAO dao : daoItems) {
+			Participaciones item = (Participaciones) dao.getItem();
+			sumVal = sumVal + item.getVotacion();
+		}
+
+		return (sumVal / count);
+	}
+
+	@Override
+	public int consultarPlazasLibresActividad(int idActividad) {
+		int max = 20; // Maximas plazas permitidas
+		int plazas = (new ParticipacionesDAO()).getPlazas(idActividad);
+		return (max - plazas);
+	}
+
+	@Override
+	public int consultarNumeroInscritosActividad(int idActividad) {
+		return (new ParticipacionesDAO()).getPlazas(idActividad);
+	}
+
+	@Override
+	public Actividad consultarActividadMejorPuntuada() {
+	 
+		Long id = (new ParticipacionesDAO()).getIdMejorPuntuacion();
+		ActividadDAO obj = (ActividadDAO) (new ActividadDAO()).getByid(id);
+		
+		return null;
+	}
+
+}

@@ -1,0 +1,214 @@
+package com.ubu.models.dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+import com.ubu.models.Participaciones;
+import com.ubu.models.dao.common.GenericDAO;
+
+public class ParticipacionesDAO extends GenericDAO {
+
+	private static final String TABLE = "participaciones";
+
+	private SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+
+	private Long id;
+
+	private Date created;
+
+	private Long idUsuario;
+
+	private Long idActividad;
+
+	private Long modoPago;
+
+	private String sugerencia;
+
+	private Long votacion;
+
+	private String comentarios;
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Date getCreated() {
+		return created;
+	}
+
+	public void setCreated(Date created) {
+		this.created = created;
+	}
+
+	public String getCreatedLabel() {
+		return formatter.format(this.created);
+	}
+
+	public Long getIdActividad() {
+		return idActividad;
+	}
+
+	public void setIdActividad(Long idActividad) {
+		this.idActividad = idActividad;
+	}
+
+	public Long getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(Long idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+
+	public Long getModoPago() {
+		return modoPago;
+	}
+
+	public void setModoPago(Long modoPago) {
+		this.modoPago = modoPago;
+	}
+
+	public String getSugerencia() {
+		return sugerencia;
+	}
+
+	public void setSugerencia(String sugerencia) {
+		this.sugerencia = sugerencia;
+	}
+
+	public Long getVotacion() {
+		return votacion;
+	}
+
+	public void setVotacion(Long votacion) {
+		this.votacion = votacion;
+	}
+
+	public String getComentarios() {
+		return comentarios;
+	}
+
+	public void setComentarios(String comentarios) {
+		this.comentarios = comentarios;
+	}
+
+	@Override
+	public Long getId() {
+		return this.id;
+	}
+
+	@Override
+	public boolean isNew() {
+		return (this.id == null);
+	}
+
+	@Override
+	public String getTable() {
+		return TABLE;
+	}
+
+	@Override
+	public String getCampos() {
+		String campos = "";
+		campos = getCorrectCampos(campos, "idUsuario", this.idUsuario);
+		campos = getCorrectCampos(campos, "idActividad", this.idActividad);
+		campos = getCorrectCampos(campos, "modoPago", this.modoPago);
+		campos = getCorrectCampos(campos, "sugerencia", this.sugerencia);
+		campos = getCorrectCampos(campos, "votacion", this.votacion);
+		campos = getCorrectCampos(campos, "comentarios", this.comentarios);
+		return campos;
+	}
+
+	@Override
+	public String getValues() {
+		String value = "";
+		value = getCorrectValues(value, this.idUsuario);
+		value = getCorrectValues(value, this.idActividad);
+		value = getCorrectValues(value, this.modoPago);
+		value = getCorrectValues(value, this.sugerencia);
+		value = getCorrectValues(value, this.votacion);
+		value = getCorrectValues(value, this.comentarios);
+
+		return value;
+	}
+
+	@Override
+	public GenericDAO getObject(ResultSet res) throws SQLException {
+
+		ParticipacionesDAO item = new ParticipacionesDAO();
+		item.id = res.getLong("id");
+		item.created = res.getDate("created");
+
+		item.idUsuario = res.getLong("idUsuario");
+		item.idActividad = res.getLong("idActividad");
+		item.modoPago = res.getLong("modoPago");
+		item.sugerencia = res.getString("sugerencia");
+		item.votacion = res.getLong("votacion");
+		item.comentarios = res.getString("comentarios");
+
+		return item;
+	}
+
+	@Override
+	public Participaciones getItem() {
+
+		Participaciones item = new Participaciones();
+		item.setId(this.id);
+		item.setCreated(this.created);
+
+		item.setIdActividad(this.idActividad);
+		item.setIdUsuario(this.idUsuario);
+
+		item.setComentarios(this.comentarios);
+		item.setModoPago(this.modoPago);
+		item.setSugerencia(this.sugerencia);
+		item.setVotacion(this.votacion);
+
+		return item;
+	}
+
+	public int getPlazas(int idActividad) {
+
+		ParticipacionesDAO item = new ParticipacionesDAO();
+		item.idActividad = Long.valueOf(idActividad);
+
+		List<GenericDAO> items = db.listByObj(item);
+		if (items == null || items.isEmpty()) {
+			return 0;
+		}
+
+		return 0;
+	}
+
+	public Long getIdMejorPuntuacion() {
+
+		Long id = -1L;
+		Long max = -1L;
+
+		List<GenericDAO> items = db.list(this);
+		for (GenericDAO obj : items) {
+			ParticipacionesDAO item = (ParticipacionesDAO) obj;
+			if (item.getVotacion() > max) {
+				max = item.getVotacion();
+				id = item.getIdActividad();
+			}
+		}
+
+		return id;
+	}
+
+	public List<Long> getConPlazas() {
+		String sql = "SELECT idActividad, COUNT(*) AS plazas FROM participaciones GROUP BY idActividad;";
+		List<GenericDAO> items = db.doExecuteQuery(sql, this);
+		ArrayList<Long> list = new ArrayList<Long>();
+		for (GenericDAO obj : items) {o
+			ParticipacionesDAO item = (ParticipacionesDAO) obj;
+
+		}
+		return null;
+	}
+
+}

@@ -1,0 +1,43 @@
+package codigo.db;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public abstract class DbObject {
+	
+	private Conexion ctx = Conexion.getInstance();
+	
+	private int id = 0;
+	
+	public int getId() {
+		return this.id;
+	}
+	
+	public abstract String getTable();
+	
+	public void insertar() throws SQLException {
+		String[] lista = { "hola", "don", "pepito" };
+		String[] col = {"name"};
+		ctx.insertar(getTable(), col, lista);
+		
+	}
+	
+	public void list() throws SQLException {
+		ResultSet rs = ctx.select(getTable());
+		while (rs.next()) {
+			// read the result set
+			System.out.println("name = " + rs.getString("name"));
+		}
+	}
+	
+	public void update() throws SQLException {
+		String[] lista = { "hola", "don", "pepito" };
+		String[] cols = {"name"}; 
+		ctx.update(getTable(), 1, cols, lista);
+	}
+	
+	public void delete() throws SQLException {
+		ctx.delete(getTable(), 1);
+	}
+	
+}

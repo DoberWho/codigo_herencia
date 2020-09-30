@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modules>
+  <module moduleId="org.eclipse.jst.jee.server:www" serverId="GlassFish 5 [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:PrSocios" serverId="GlassFish 5 [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:Guestbook" serverId="GlassFish 5 [domain1]"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:socios" serverId="GlassFish 5 [domain1]"/>
+</modules>

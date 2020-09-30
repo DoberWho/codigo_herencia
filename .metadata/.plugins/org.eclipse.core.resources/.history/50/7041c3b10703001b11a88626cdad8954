@@ -1,0 +1,8 @@
+package codigo.models.lagarto;
+
+import codigo.models.Animal;
+
+public class Lagarto extends Animal{
+
+	public void seRegenera() {}
+}

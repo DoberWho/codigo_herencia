@@ -1,0 +1,119 @@
+package com.ubu.models.dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Date;
+
+import com.ubu.models.User;
+import com.ubu.models.dao.common.GenericDAO;
+
+public class UserDAO extends GenericDAO {
+
+	private static final String TABLE = "user";
+
+	private Long id;
+	private Date created;
+	private String login;
+	private String pass;
+	private Boolean perfilAcceso;
+
+	public Date getCreated() {
+		return created;
+	}
+
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public void setCreated(Date created) {
+		this.created = created;
+	}
+
+	public String getPass() {
+		return pass;
+	}
+
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+
+	public Boolean getIsAdmin() {
+		return perfilAcceso;
+	}
+
+	public void setIsAdmin(Boolean isAdmin) {
+		this.perfilAcceso = isAdmin;
+	}
+
+	@Override
+	public Long getId() {
+		return this.id;
+	}
+
+	@Override
+	public boolean isNew() {
+		return (this.id == null);
+	}
+
+	@Override
+	public String getTable() {
+		return TABLE;
+	}
+
+	@Override
+	public String getCampos() {
+		String campos = "";
+		campos = getCorrectCampos(campos, "login", this.login);
+		campos = getCorrectCampos(campos, "pass", this.pass); 
+		campos = getCorrectCampos(campos, "perfil_acceso", this.perfilAcceso);
+		return campos;
+	}
+
+	@Override
+	public String getValues() {
+		String value = "";
+		value = getCorrectValues(value, this.login);
+		value = getCorrectValues(value, this.pass); 
+		value = getCorrectValues(value, this.perfilAcceso);
+		return value;
+	}
+
+	@Override
+	public GenericDAO getObject(ResultSet res) throws SQLException {
+
+		UserDAO item = new UserDAO();
+		item.id = res.getInt("id");
+
+		item.created = res.getDate("created");
+
+		item.login = res.getString("login");
+		item.pass = res.getString("pass"); 
+
+		item.perfilAcceso = res.getBoolean("perfil_acceso");
+
+		return item;
+	}
+
+	@Override
+	public User getItem() {
+
+		User item = new User();
+		item.setId(this.id);
+		item.setCreated(this.created);
+		item.setLogin(this.login);
+		item.setPass(this.pass); 
+		item.setIsAdmin(this.perfilAcceso);
+
+		return item;
+
+	}
+
+}

@@ -1,0 +1,14 @@
+package codigo.models.lagarto;
+
+import codigo.models.Animal;
+
+public abstract class Lagarto extends Animal{
+
+	public void seRegenera() {}
+	
+	@Override
+	public boolean estaVivo() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+}
