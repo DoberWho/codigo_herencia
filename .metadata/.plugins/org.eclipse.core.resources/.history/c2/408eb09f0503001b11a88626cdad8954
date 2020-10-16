@@ -1,7 +1,0 @@
-package codigo.models.mamifero;
-
-import codigo.models.Animal;
-
-public class Mamifero extends Animal{
-
-}

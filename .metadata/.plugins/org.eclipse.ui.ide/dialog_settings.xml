@@ -17,6 +17,8 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\codigo\Herencia - copia"/>
+			<item value="C:\Users\jorge\eclipse-workspace\Herencia - copia"/>
 			<item value="C:\Users\jorge\code\castelao\dam\20-20\prueba"/>
 			<item value="C:\Users\jorge\code\PRacticas\Practica2\socios"/>
 			<item value="C:\Users\jorge\code\PRacticas\Practica3"/>

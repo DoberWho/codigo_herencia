@@ -1,25 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.ubu.socios.models.Participaciones"/>
-    <fullyQualifiedTypeName name="com.ubu.lsi.common.GenericServlet"/>
-    <fullyQualifiedTypeName name="com.ubu.lsi.servlets.common.GenericServlet"/>
-    <fullyQualifiedTypeName name="com.ubu.lsi.models.User"/>
-    <fullyQualifiedTypeName name="javax.servlet.GenericServlet"/>
-    <fullyQualifiedTypeName name="socios.common.GenericServlet"/>
-    <fullyQualifiedTypeName name="socios.models.GuestUser"/>
-    <fullyQualifiedTypeName name="javax.persistence.Persistence"/>
-    <fullyQualifiedTypeName name="socios.models.dao.JPAUtil"/>
-    <fullyQualifiedTypeName name="javax.persistence.Column"/>
-    <fullyQualifiedTypeName name="javax.persistence.Transient"/>
-    <fullyQualifiedTypeName name="javax.persistence.Table"/>
-    <fullyQualifiedTypeName name="socios.models.dao.ActividadesDao"/>
-    <fullyQualifiedTypeName name="socios.models.dao.UserDao"/>
-    <fullyQualifiedTypeName name="socios.models.Actividad"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
-    <fullyQualifiedTypeName name="com.ubu.lsi.socios.models.User"/>
-    <fullyQualifiedTypeName name="javax.jws.WebService"/>
-    <fullyQualifiedTypeName name="javax.jws.soap.SOAPBinding.Style"/>
-    <fullyQualifiedTypeName name="com.ctba.test.server.ActividadesGimnasioImpl"/>
     <fullyQualifiedTypeName name="com.ubu.actividadesWS.models.User"/>
     <fullyQualifiedTypeName name="javax.xml.ws.Endpoint"/>
     <fullyQualifiedTypeName name="com.sun.org.slf4j.internal.Logger"/>
@@ -46,12 +26,10 @@
     <fullyQualifiedTypeName name="codigo.PrincipalNoLambda"/>
     <fullyQualifiedTypeName name="codigo.interfaces.Predicado"/>
     <fullyQualifiedTypeName name="codigo.PrincipalNoLambda.Operacion"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
     <fullyQualifiedTypeName name="java.util.stream.Stream"/>
     <fullyQualifiedTypeName name="java.util.stream.IntStream"/>
     <fullyQualifiedTypeName name="codigo.models.Persona"/>
-    <fullyQualifiedTypeName name="codigo.cfg.Config"/>
     <fullyQualifiedTypeName name="com.mysql.jdbc.Connection"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="com.mysql.jdbc.Statement"/>
@@ -60,4 +38,26 @@
     <fullyQualifiedTypeName name="codigo.db.Conexion"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="codigo.db.DbObject"/>
+    <fullyQualifiedTypeName name="codigo.models.lagarto.Cocodrilo"/>
+    <fullyQualifiedTypeName name="codigo.models.lagarto.Salamandra"/>
+    <fullyQualifiedTypeName name="codigo.models.lagarto.Lagarto"/>
+    <fullyQualifiedTypeName name="codigo.models.mamifero.Delfin"/>
+    <fullyQualifiedTypeName name="codigo.models.mamifero.Elefante"/>
+    <fullyQualifiedTypeName name="codigo.models.mamifero.Mamifero"/>
+    <fullyQualifiedTypeName name="codigo.models.Animal"/>
+    <fullyQualifiedTypeName name="codigo.models.interfaces.PuedeNadar"/>
+    <fullyQualifiedTypeName name="codigo.models.interfaces.PuedeCaminar"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="org.w3c.dom.Document"/>
+    <fullyQualifiedTypeName name="javax.xml.parsers.DocumentBuilderFactory"/>
+    <fullyQualifiedTypeName name="javax.xml.parsers.DocumentBuilder"/>
+    <fullyQualifiedTypeName name="javax.xml.transform.TransformerFactory"/>
+    <fullyQualifiedTypeName name="javax.xml.transform.Transformer"/>
+    <fullyQualifiedTypeName name="javax.xml.transform.dom.DOMSource"/>
+    <fullyQualifiedTypeName name="javax.xml.transform.stream.StreamResult"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="org.w3c.dom.Element"/>
+    <fullyQualifiedTypeName name="org.w3c.dom.Attr"/>
+    <fullyQualifiedTypeName name="codigo.cfg.Config"/>
+    <fullyQualifiedTypeName name="codigo.db.ConfigDB"/>
 </qualifiedTypeNameHistroy>

@@ -1,6 +1,0 @@
-package codigo.models;
-
-public class Animal {
-
-	public void estaVivo() {}
-}

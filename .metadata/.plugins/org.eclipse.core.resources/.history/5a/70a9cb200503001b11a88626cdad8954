@@ -1,5 +1,0 @@
-package codigo.models;
-
-public class Lagarto extends Animal{
-
-}

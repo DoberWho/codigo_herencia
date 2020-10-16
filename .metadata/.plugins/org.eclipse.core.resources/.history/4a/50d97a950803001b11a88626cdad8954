@@ -1,6 +1,0 @@
-package codigo.models.mamifero;
-
-public class Elefante extends Mamifero {
-
-	public void trompa() {}
-}
