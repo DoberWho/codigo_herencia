@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.ubu.actividadesWS.models.User"/>
-    <fullyQualifiedTypeName name="javax.xml.ws.Endpoint"/>
-    <fullyQualifiedTypeName name="com.sun.org.slf4j.internal.Logger"/>
-    <fullyQualifiedTypeName name="com.sun.org.slf4j.internal.LoggerFactory"/>
-    <fullyQualifiedTypeName name="org.slf4j.Logger"/>
     <fullyQualifiedTypeName name="org.apache.logging.log4j.LogManager"/>
     <fullyQualifiedTypeName name="org.apache.logging.log4j.core.Logger"/>
     <fullyQualifiedTypeName name="com.ubu.models.dao.ParticipacionesDAO"/>
@@ -60,4 +55,9 @@
     <fullyQualifiedTypeName name="org.w3c.dom.Attr"/>
     <fullyQualifiedTypeName name="codigo.cfg.Config"/>
     <fullyQualifiedTypeName name="codigo.db.ConfigDB"/>
+    <fullyQualifiedTypeName name="org.hibernate.annotations.Entity"/>
+    <fullyQualifiedTypeName name="javax.persistence.Id"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
 </qualifiedTypeNameHistroy>

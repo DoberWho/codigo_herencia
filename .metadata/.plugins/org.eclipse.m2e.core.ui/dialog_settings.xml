@@ -49,6 +49,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\jorge\git\repository\PR01"/>
 			<item value="C:\Users\jorge\eclipse-workspace\Servers"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -73,10 +74,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.castelaofpe.maven.tienda"/>
 		</list>
 		<list key="groupId">
+			<item value="com.castelaofpe"/>
 		</list>
 		<list key="artifactId">
+			<item value="maven.tienda"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -112,7 +116,13 @@
 	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
 		<item key="width" value="480"/>
 		<item key="height" value="531"/>
-		<item key="x" value="720"/>
-		<item key="y" value="166"/>
+		<item key="x" value="511"/>
+		<item key="y" value="148"/>
+	</section>
+	<section name="org.eclipse.m2e.editor.dialogs.ManageDependenciesDialog">
+		<item key="width" value="705"/>
+		<item key="height" value="450"/>
+		<item key="x" value="288"/>
+		<item key="y" value="80"/>
 	</section>
 </section>
