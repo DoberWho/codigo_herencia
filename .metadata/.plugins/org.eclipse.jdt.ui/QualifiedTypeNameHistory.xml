@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.apache.logging.log4j.LogManager"/>
-    <fullyQualifiedTypeName name="org.apache.logging.log4j.core.Logger"/>
     <fullyQualifiedTypeName name="com.ubu.models.dao.ParticipacionesDAO"/>
     <fullyQualifiedTypeName name="com.ubu.models.dao.ActividadDAO"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
     <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
     <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
+    <fullyQualifiedTypeName name="codigo.models.Usuario"/>
+    <fullyQualifiedTypeName name="codigo.models.Producto"/>
 </qualifiedTypeNameHistroy>
