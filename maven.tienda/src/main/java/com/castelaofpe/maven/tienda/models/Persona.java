@@ -1,22 +1,26 @@
-package com.castelaofpe.maven.tienda.models; 
-  
+package com.castelaofpe.maven.tienda.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Persona {	 
 	  
-		
-	private int id = 0;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id = 0l;
+	
 	public String name = "";  
 	public String lastname = "";  
-	 
-	 
+	 	 
 
-	public int getId() {
+	public Long getId() {		
 		return id;
-	}
+	} 
 
-
-
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
