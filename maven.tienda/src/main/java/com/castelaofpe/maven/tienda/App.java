@@ -22,6 +22,9 @@ public class App {
     	 EntityManagerFactory factory = Persistence.createEntityManagerFactory("UD01");
          EntityManager em = factory.createEntityManager();
          
+         EntityTransaction trans = em.getTransaction();
+         trans.begin();
+         
          
          // read the existing entries and write to console
          Query q = em.createQuery("select e from Persona e");
@@ -49,8 +52,7 @@ public class App {
          
          
          // create new todo
-         EntityTransaction trans = em.getTransaction();
-         trans.begin();
+         
          
          Persona per = new Persona();
          per.setName("Mukesh"); 
@@ -58,11 +60,7 @@ public class App {
          
          em.persist(per);
          
-         trans.commit();
-         
-         
-        
-    	
+         trans.commit(); 
          em.close(); 
     }
 }
