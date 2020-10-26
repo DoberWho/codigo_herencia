@@ -1,2 +1,4 @@
-commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>ADD</message>\r\n<message>ADD\:</message>\r\n<message>FIX</message>\r\n<message>ADD\: Menu Simple (NO FUNCIONA)</message>\r\n<message>Initial</message>\r\n<message>FIX\: Consulta Insert+Update</message>\r\n<message>ADD\: Listar</message>\r\n<message>ADD\: Borrar Objeto</message>\r\n<message>ADD\: Listar&\#x0A;\=&gt; Nota\: Mejoramos el c\u00F3digo con la eliminaci\u00F3n de un objeto&\#x0A;prescindible</message>\r\n<message>ADD\: Config \=&gt; Create TAble</message>\r\n</messages>
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>Correcci\u00F3n de Errores</message>\r\n<message>FIX\: Conexi\u00F3n Hibernate</message>\r\n<message>ADD\: Librerias</message>\r\n<message>ADD</message>\r\n<message>ADD\:</message>\r\n<message>FIX</message>\r\n<message>ADD\: Menu Simple (NO FUNCIONA)</message>\r\n<message>Initial</message>\r\n<message>FIX\: Consulta Insert+Update</message>\r\n<message>ADD\: Listar</message>\r\n</messages>
 eclipse.preferences.version=1
+resourcehistory_graph_split=500,500
+resourcehistory_rev_split=700,300

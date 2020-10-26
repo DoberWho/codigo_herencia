@@ -12896,3 +12896,130 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.apache.de
 2020-10-23 12:55:58,505 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
 2020-10-23 12:55:58,506 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-10-23 12:55:58,506 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 12:35:40,108 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-10-26 12:59:48,387 [Worker-29: Launching Executing generate-sources in C__Users_jorge_eclipse-workspace_maven.tienda] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\jorge\eclipse-workspace\maven.tienda
+2020-10-26 12:59:48,389 [Worker-29: Launching Executing generate-sources in C__Users_jorge_eclipse-workspace_maven.tienda] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B generate-sources
+2020-10-26 13:00:19,529 [Worker-29: Launching Executing install in C__Users_jorge_eclipse-workspace_maven.tienda] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\jorge\eclipse-workspace\maven.tienda
+2020-10-26 13:00:19,529 [Worker-29: Launching Executing install in C__Users_jorge_eclipse-workspace_maven.tienda] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2020-10-26 13:16:32,648 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:16:32,649 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:16:32,651 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:16:32,652 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:16:41,065 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:16:41,066 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:16:41,068 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:16:41,069 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:17:16,641 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:17:16,642 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:17:16,644 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:17:16,644 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:17:58,963 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:17:58,964 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:17:58,966 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:17:58,966 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:20:15,080 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:20:15,080 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:20:15,082 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:20:15,082 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:21:23,252 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:21:23,252 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:21:23,254 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:21:23,255 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:21:37,477 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:21:37,477 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:21:37,479 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:21:37,480 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:23:47,153 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:23:47,153 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:23:47,156 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:23:47,156 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:24:31,224 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:24:31,224 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:24:31,226 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:24:31,226 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:24:35,448 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:24:35,448 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:24:35,450 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:24:35,450 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:25:59,481 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:25:59,482 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:25:59,483 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:25:59,483 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:27:40,342 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:27:40,342 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:27:40,344 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:27:40,344 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:27:54,401 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:27:54,402 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:27:54,403 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:27:54,404 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:28:49,276 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:28:49,276 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:28:49,278 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:28:49,278 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:31:13,805 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:31:13,805 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:31:13,807 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:31:13,808 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:31:45,047 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:31:45,048 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:31:45,050 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:31:45,050 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:31:56,937 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:31:56,937 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:31:56,939 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:31:56,940 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:33:51,395 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:33:51,396 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:33:51,397 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:33:51,398 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:33:56,075 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:33:56,075 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:33:56,076 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:33:56,077 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:34:02,661 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:34:02,661 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:34:02,662 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:34:02,663 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:34:28,756 [Worker-43: Launching Executing clean in C__Users_jorge_eclipse-workspace_maven.tienda] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\jorge\eclipse-workspace\maven.tienda
+2020-10-26 13:34:28,756 [Worker-43: Launching Executing clean in C__Users_jorge_eclipse-workspace_maven.tienda] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2020-10-26 13:34:36,396 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2020-10-26 13:34:38,261 [Worker-37: Launching maven.tienda] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\jorge\eclipse-workspace\maven.tienda
+2020-10-26 13:34:38,261 [Worker-37: Launching maven.tienda] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B 
+2020-10-26 13:34:48,164 [Worker-37: Launching Executing install in C__Users_jorge_eclipse-workspace_maven.tienda] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\jorge\eclipse-workspace\maven.tienda
+2020-10-26 13:34:48,164 [Worker-37: Launching Executing install in C__Users_jorge_eclipse-workspace_maven.tienda] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2020-10-26 13:35:02,358 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2020-10-26 13:35:04,047 [Worker-37: Launching maven.tienda] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\jorge\eclipse-workspace\maven.tienda
+2020-10-26 13:35:04,047 [Worker-37: Launching maven.tienda] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B 
+2020-10-26 13:35:30,909 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:35:30,909 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:35:30,911 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:35:30,911 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:35:36,891 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:35:36,892 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:35:36,893 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:35:36,893 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:35:37,906 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:35:37,906 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:35:37,907 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:35:37,908 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:36:46,086 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:36:46,086 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:36:46,088 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:36:46,088 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:36:53,289 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:36:53,289 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:36:53,290 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:36:53,291 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:37:07,833 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:37:07,833 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:37:07,835 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:37:07,835 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:38:32,160 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:38:32,161 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:38:32,162 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:38:32,162 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources
+2020-10-26 13:39:28,106 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:39:28,107 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\main\resources
+2020-10-26 13:39:28,108 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-26 13:39:28,109 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\jorge\eclipse-workspace\maven.tienda\src\test\resources

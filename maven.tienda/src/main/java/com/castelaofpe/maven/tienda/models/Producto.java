@@ -1,11 +1,22 @@
 package com.castelaofpe.maven.tienda.models; 
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "producto")
 public class Producto {
  
-
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id = 0;
-	public String name = "";
+	
+	@Column(name="name")
+	public String nombre = "";
 	public String desc = "";
 	public int precio = 0; 
 	public int stock = 1;
@@ -30,12 +41,13 @@ public class Producto {
 	}
 	public void setId(int id) {
 		this.id = id;
+	} 
+	
+	public String getNombre() {
+		return nombre;
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 	public String getDesc() {
 		return desc;
@@ -52,7 +64,7 @@ public class Producto {
 	 
 	@Override
 	public String toString() {
-		return "ID:"+this.id+" -> Nombre: "+this.name+" - Precio: "+this.precio+" - Stock: "+this.stock;
+		return "ID:"+this.id+" -> Nombre: "+this.nombre+" - Precio: "+this.precio+" - Stock: "+this.stock;
 	}
 
 }

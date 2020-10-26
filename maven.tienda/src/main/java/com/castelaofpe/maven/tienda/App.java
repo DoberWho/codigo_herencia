@@ -9,6 +9,8 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 
 import com.castelaofpe.maven.tienda.models.Persona;
+import com.castelaofpe.maven.tienda.models.Producto;
+import com.castelaofpe.maven.tienda.models.Usuario;
 
 /**
  * Hello world!
@@ -17,7 +19,7 @@ import com.castelaofpe.maven.tienda.models.Persona;
 public class App {
     public static void main( String[] args ) {
         
-    	 EntityManagerFactory factory = Persistence.createEntityManagerFactory("TestPersistence");
+    	 EntityManagerFactory factory = Persistence.createEntityManagerFactory("UD01");
          EntityManager em = factory.createEntityManager();
          
          
@@ -27,7 +29,23 @@ public class App {
          for (Persona employee : employeeList) {
            System.out.println(employee);
          }
-         System.out.println("Size: " + employeeList.size());
+         System.out.println("Size: " + employeeList.size());        
+         
+         
+         Query q02 = em.createQuery("select e from Usuario e");
+         List<Usuario> usuarios = q02.getResultList();
+         for (Usuario usuario : usuarios) {
+           System.out.println(usuario);
+         }
+         System.out.println("Size: " + usuarios.size());
+         
+         Query q03 = em.createQuery("select e from Producto e");
+         List<Producto> productos = q03.getResultList();
+         for (Producto producto : productos) {
+           System.out.println(producto);
+         }
+         System.out.println("Size: " + productos.size());
+         
          
          
          // create new todo
@@ -41,8 +59,10 @@ public class App {
          em.persist(per);
          
          trans.commit();
-         em.close();
+         
+         
+        
     	
-    	
+         em.close(); 
     }
 }

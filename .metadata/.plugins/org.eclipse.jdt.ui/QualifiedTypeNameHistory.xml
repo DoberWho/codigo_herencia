@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.ubu.models.dao.ParticipacionesDAO"/>
-    <fullyQualifiedTypeName name="com.ubu.models.dao.ActividadDAO"/>
-    <fullyQualifiedTypeName name="java.io.Serializable"/>
-    <fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlRootElement"/>
     <fullyQualifiedTypeName name="javax.jws.WebMethod"/>
     <fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlElement"/>
     <fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlTransient"/>
     <fullyQualifiedTypeName name="com.ubu.models.Actividad"/>
     <fullyQualifiedTypeName name="org.hibernate.Session"/>
     <fullyQualifiedTypeName name="java.util.function.Predicate"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.function.Function"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
@@ -54,10 +49,15 @@
     <fullyQualifiedTypeName name="codigo.cfg.Config"/>
     <fullyQualifiedTypeName name="codigo.db.ConfigDB"/>
     <fullyQualifiedTypeName name="org.hibernate.annotations.Entity"/>
-    <fullyQualifiedTypeName name="javax.persistence.Id"/>
-    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
-    <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
-    <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="codigo.models.Usuario"/>
     <fullyQualifiedTypeName name="codigo.models.Producto"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="javax.persistence.Id"/>
+    <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
+    <fullyQualifiedTypeName name="javax.persistence.Persistence"/>
+    <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.castelaofpe.maven.tienda.models.Persona"/>
+    <fullyQualifiedTypeName name="javax.persistence.Table"/>
 </qualifiedTypeNameHistroy>
