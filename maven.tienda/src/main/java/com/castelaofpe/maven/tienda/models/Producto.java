@@ -70,7 +70,13 @@ public class Producto {
 	 
 	@Override
 	public String toString() {
-		return "ID:"+this.id+" -> Nombre: "+this.nombre+" - Precio: "+this.precio+" - Stock: "+this.stock;
+		String res = "ID:"+this.id+" -> Nombre: "+this.nombre+" - Precio: "+this.precio+" - Stock: "+this.stock;;
+		if (this.categoria != null) {
+			res = res + " => Categoria: "+this.categoria.getNombre();
+		}else {
+			res = res + " => Categoria: NULL";
+		}
+		return res;
 	}
 
 }
