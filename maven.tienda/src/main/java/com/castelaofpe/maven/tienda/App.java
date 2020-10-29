@@ -8,6 +8,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
+import com.castelaofpe.maven.tienda.models.Categoria;
 import com.castelaofpe.maven.tienda.models.Persona;
 import com.castelaofpe.maven.tienda.models.Producto;
 import com.castelaofpe.maven.tienda.models.Usuario;
@@ -25,40 +26,24 @@ public class App {
          EntityTransaction trans = em.getTransaction();
          trans.begin();
          
+         Query qCat = em.createQuery("select e from Categoria e WHERE e.id = "+1, Categoria.class);
+         Categoria cat = (Categoria) qCat.getSingleResult();
          
-         // read the existing entries and write to console
-         Query q = em.createQuery("select e from Persona e");
-         List<Persona> employeeList = q.getResultList();
-         for (Persona employee : employeeList) {
-           System.out.println(employee);
-         }
-         System.out.println("Size: " + employeeList.size());        
-         
-         
-         Query q02 = em.createQuery("select e from Usuario e");
-         List<Usuario> usuarios = q02.getResultList();
-         for (Usuario usuario : usuarios) {
-           System.out.println(usuario);
-         }
-         System.out.println("Size: " + usuarios.size());
-         
-         Query q03 = em.createQuery("select e from Producto e");
+         Query q03 = em.createQuery("select e from Producto e WHERE e.categoria= :cat");
+         q03.setParameter("cat", cat);
          List<Producto> productos = q03.getResultList();
          for (Producto producto : productos) {
            System.out.println(producto);
          }
-         System.out.println("Size: " + productos.size());
+         System.out.println("Size: " + productos.size()); 
+        
          
+         Producto prod = new Producto();
+         prod.nombre = "Producto 666";
          
-         
-         // create new todo
-         
-         
-         Persona per = new Persona();
-         per.setName("Mukesh"); 
-         per.setLastname("Apellido");
-         
-         em.persist(per);
+         prod.categoria = cat;
+         em.persist(cat); 
+         em.persist(prod); 
          
          trans.commit(); 
          em.close(); 

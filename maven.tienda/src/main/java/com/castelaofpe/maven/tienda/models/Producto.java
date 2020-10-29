@@ -14,11 +14,13 @@ import javax.persistence.Table;
 public class Producto {
  
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id = 0;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id = 0;
 	
 	@Column(name="name")
 	public String nombre = "";
+	
+	@Column(name="description")
 	public String desc = "";
 	public int precio = 0; 
 	public int stock = 1;
@@ -42,10 +44,10 @@ public class Producto {
 	public void setPrecio(int precio) {
 		this.precio = precio;
 	}
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	} 
 	

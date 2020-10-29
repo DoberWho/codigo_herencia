@@ -13,21 +13,21 @@ import javax.persistence.Table;
 public class Categoria {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id = 0;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id = 0;
 	
 	@Column(name="name")
-	public String nombre = "";
+	private String nombre = "";
 	
 	
 	
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
 
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
