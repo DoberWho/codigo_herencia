@@ -1,4 +1,4 @@
-commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>Correcci\u00F3n de Errores</message>\r\n<message>FIX\: Conexi\u00F3n Hibernate</message>\r\n<message>ADD\: Librerias</message>\r\n<message>ADD</message>\r\n<message>ADD\:</message>\r\n<message>FIX</message>\r\n<message>ADD\: Menu Simple (NO FUNCIONA)</message>\r\n<message>Initial</message>\r\n<message>FIX\: Consulta Insert+Update</message>\r\n<message>ADD\: Listar</message>\r\n</messages>
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>ADD\: Tipo Generico de controlador</message>\r\n<message>ADD\: PRoducto-&gt; CAtegoria</message>\r\n<message>ADD\: Relaci\u00F3n Producto-&gt;Categoria</message>\r\n<message>ADD\: Entidades</message>\r\n<message>Correcci\u00F3n de Errores</message>\r\n<message>FIX\: Conexi\u00F3n Hibernate</message>\r\n<message>ADD\: Librerias</message>\r\n<message>ADD</message>\r\n<message>ADD\:</message>\r\n<message>FIX</message>\r\n</messages>
 eclipse.preferences.version=1
 resourcehistory_graph_split=500,500
 resourcehistory_rev_split=700,300
