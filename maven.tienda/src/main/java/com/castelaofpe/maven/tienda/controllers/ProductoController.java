@@ -2,22 +2,14 @@ package com.castelaofpe.maven.tienda.controllers;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
-import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceContextType;
 import javax.persistence.Query;
 
 import com.castelaofpe.maven.tienda.models.Categoria;
 import com.castelaofpe.maven.tienda.models.Producto;
 
-public class ProductoController implements GenericController<Producto>{
-	
-	private EntityManagerFactory factory = Persistence.createEntityManagerFactory("UD01");
-    private EntityManager entityManager = factory.createEntityManager();
-
+public class ProductoController extends GenericController<Producto>{
+	 
 	@Override
 	public Producto get(long id) {
 		return (Producto) entityManager.find(Producto.class, id);

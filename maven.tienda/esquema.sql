@@ -18,8 +18,8 @@ USE `clase`;
 
 -- Volcando estructura para tabla clase.categoria
 CREATE TABLE IF NOT EXISTS `categoria` (
-  `id` int(11) unsigned NOT NULL,
-  `name` varchar(255) COLLATE latin1_spanish_ci DEFAULT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) COLLATE latin1_spanish_ci NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
@@ -27,54 +27,56 @@ CREATE TABLE IF NOT EXISTS `categoria` (
 /*!40000 ALTER TABLE `categoria` DISABLE KEYS */;
 /*!40000 ALTER TABLE `categoria` ENABLE KEYS */;
 
--- Volcando estructura para tabla clase.hibernate_sequence
-CREATE TABLE IF NOT EXISTS `hibernate_sequence` (
-  `next_val` bigint(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
-
--- Volcando datos para la tabla clase.hibernate_sequence: ~1 rows (aproximadamente)
-/*!40000 ALTER TABLE `hibernate_sequence` DISABLE KEYS */;
-INSERT INTO `hibernate_sequence` (`next_val`) VALUES
-	(2);
-/*!40000 ALTER TABLE `hibernate_sequence` ENABLE KEYS */;
-
 -- Volcando estructura para tabla clase.person
 CREATE TABLE IF NOT EXISTS `person` (
-  `id` bigint(20) NOT NULL,
-  `lastname` varchar(255) COLLATE latin1_spanish_ci DEFAULT NULL,
-  `name` varchar(255) COLLATE latin1_spanish_ci DEFAULT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `lastname` varchar(50) COLLATE latin1_spanish_ci NOT NULL DEFAULT '0',
+  `name` varchar(50) COLLATE latin1_spanish_ci NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 -- Volcando datos para la tabla clase.person: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `person` DISABLE KEYS */;
-INSERT INTO `person` (`id`, `lastname`, `name`) VALUES
-	(1, 'Apellido', 'Mukesh');
 /*!40000 ALTER TABLE `person` ENABLE KEYS */;
 
--- Volcando estructura para tabla clase.producto
-CREATE TABLE IF NOT EXISTS `producto` (
+-- Volcando estructura para tabla clase.product
+CREATE TABLE IF NOT EXISTS `product` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) COLLATE latin1_spanish_ci NOT NULL,
-  `desc` varchar(50) COLLATE latin1_spanish_ci NOT NULL,
-  `stock` int(10) unsigned NOT NULL DEFAULT '1',
-  `id_category` int(10) unsigned NOT NULL,
-  `precio` int(10) unsigned NOT NULL DEFAULT '0',
+  `description` varchar(50) COLLATE latin1_spanish_ci NOT NULL DEFAULT '0',
+  `precio` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `stock` tinyint(3) unsigned NOT NULL DEFAULT '1',
+  `id_category` int(10) unsigned NOT NULL DEFAULT '1',
+  `name` varchar(50) COLLATE latin1_spanish_ci NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
-  KEY `FK_producto_categoria` (`id_category`),
-  CONSTRAINT `FK_producto_categoria` FOREIGN KEY (`id_category`) REFERENCES `categoria` (`id`)
+  KEY `FK_product_categoria` (`id_category`),
+  CONSTRAINT `FK_product_categoria` FOREIGN KEY (`id_category`) REFERENCES `categoria` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
--- Volcando datos para la tabla clase.producto: ~0 rows (aproximadamente)
-/*!40000 ALTER TABLE `producto` DISABLE KEYS */;
-/*!40000 ALTER TABLE `producto` ENABLE KEYS */;
+-- Volcando datos para la tabla clase.product: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `product` DISABLE KEYS */;
+/*!40000 ALTER TABLE `product` ENABLE KEYS */;
+
+-- Volcando estructura para tabla clase.producto_variante
+CREATE TABLE IF NOT EXISTS `producto_variante` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id_producto` int(10) unsigned NOT NULL DEFAULT '0',
+  `stock` int(10) unsigned NOT NULL DEFAULT '0',
+  `precio` int(10) unsigned NOT NULL DEFAULT '0',
+  `name` varchar(50) COLLATE latin1_spanish_ci NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `FK_producto_variante_product` (`id_producto`),
+  CONSTRAINT `FK_producto_variante_product` FOREIGN KEY (`id_producto`) REFERENCES `product` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+
+-- Volcando datos para la tabla clase.producto_variante: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `producto_variante` DISABLE KEYS */;
+/*!40000 ALTER TABLE `producto_variante` ENABLE KEYS */;
 
 -- Volcando estructura para tabla clase.usuario
 CREATE TABLE IF NOT EXISTS `usuario` (
-  `id` int(11) NOT NULL,
-  `edad` int(11) NOT NULL,
-  `login` varchar(255) COLLATE latin1_spanish_ci DEFAULT NULL,
-  `pass` varchar(255) COLLATE latin1_spanish_ci DEFAULT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `pass` varchar(50) COLLATE latin1_spanish_ci NOT NULL DEFAULT '0',
+  `edad` tinyint(3) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 

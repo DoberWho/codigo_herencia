@@ -12,7 +12,7 @@ public class Persona {
 	  
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id = 0l;
+	private Long id = 0L;
 	
 	public String name = "";  
 	public String lastname = "";  
