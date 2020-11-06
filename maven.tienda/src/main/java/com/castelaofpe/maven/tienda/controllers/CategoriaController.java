@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceContextType;
@@ -29,18 +30,24 @@ public class CategoriaController implements GenericController<Categoria> {
 
 	@Override
 	public void save(Categoria t) {
+		EntityTransaction trans = entityManager.getTransaction();
 		entityManager.persist(t); 
+		trans.commit();
 	}
 
 	@Override
 	public void update(Categoria t) { 
+		EntityTransaction trans = entityManager.getTransaction();
 		entityManager.persist(t); 
+		trans.commit();
 		
 	}
 
 	@Override
 	public void delete(Categoria t) {
-		entityManager.remove(t);
+		EntityTransaction trans = entityManager.getTransaction();
+		entityManager.remove(t); 
+		trans.commit(); 
 	}
 	
 	

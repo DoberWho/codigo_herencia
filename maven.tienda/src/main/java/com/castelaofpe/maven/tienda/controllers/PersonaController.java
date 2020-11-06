@@ -4,11 +4,13 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceContextType;
 import javax.persistence.Query;
 
+import com.castelaofpe.maven.tienda.models.Categoria;
 import com.castelaofpe.maven.tienda.models.Persona; 
 
 public class PersonaController implements GenericController<Persona> {
@@ -30,17 +32,24 @@ public class PersonaController implements GenericController<Persona> {
 
 	@Override
 	public void save(Persona t) {
+		EntityTransaction trans = entityManager.getTransaction();
 		entityManager.persist(t); 
+		trans.commit();
 	}
 
 	@Override
-	public void update(Persona t) {
-		entityManager.persist(t);
+	public void update(Persona t) { 
+		EntityTransaction trans = entityManager.getTransaction();
+		entityManager.persist(t); 
+		trans.commit();
+		
 	}
 
 	@Override
 	public void delete(Persona t) {
-		entityManager.remove(t);
+		EntityTransaction trans = entityManager.getTransaction();
+		entityManager.remove(t); 
+		trans.commit(); 
 	}
 
 }
