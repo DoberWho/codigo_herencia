@@ -5,6 +5,7 @@
 		
 		<class>com.castelaofpe.maven.tienda.models.Persona</class> 
 		<class>com.castelaofpe.maven.tienda.models.Producto</class> 
+		<class>com.castelaofpe.maven.tienda.models.ProductoVariante</class> 
 		<class>com.castelaofpe.maven.tienda.models.Usuario</class> 
 		<class>com.castelaofpe.maven.tienda.models.Categoria</class> 
 		<properties>

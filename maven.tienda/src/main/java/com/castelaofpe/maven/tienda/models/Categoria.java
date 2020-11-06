@@ -14,20 +14,20 @@ public class Categoria {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id = 0;
+	private Long id = 0L;
 	
 	@Column(name="name")
 	private String nombre = "";
 	
 	
 	
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
 
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

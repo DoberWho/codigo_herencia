@@ -3,6 +3,8 @@ package com.castelaofpe.maven.tienda.controllers;
 import java.util.List; 
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceContextType;
 import javax.persistence.Query;
@@ -11,8 +13,8 @@ import com.castelaofpe.maven.tienda.models.Categoria;
 
 public class CategoriaController implements GenericController<Categoria> {
 	
-	@PersistenceContext(unitName = "UD01", type = PersistenceContextType.EXTENDED)
-    private EntityManager entityManager;
+	private EntityManagerFactory factory = Persistence.createEntityManagerFactory("UD01");
+    private EntityManager entityManager = factory.createEntityManager();
 
 	@Override
 	public Categoria get(long id) {
