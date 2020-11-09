@@ -10,7 +10,7 @@ import com.castelaofpe.maven.tienda.models.Persona;
 public class PersonaController extends GenericController<Persona> { 
 
 	@Override
-	public Persona get(long id) {
+	public Persona get(int id) {
 		return (Persona) entityManager.find(Persona.class, id);
 	}
 

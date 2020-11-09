@@ -10,7 +10,7 @@ import com.castelaofpe.maven.tienda.models.Categoria;
 public class CategoriaController extends GenericController<Categoria> {
 	 
 	@Override
-	public Categoria get(long id) {
+	public Categoria get(int id) {
 		return (Categoria) entityManager.find(Categoria.class, id);
 	}
 

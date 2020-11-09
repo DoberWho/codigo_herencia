@@ -13,10 +13,12 @@
 
 
 -- Volcando estructura de base de datos para clase
+DROP DATABASE IF EXISTS `clase`;
 CREATE DATABASE IF NOT EXISTS `clase` /*!40100 DEFAULT CHARACTER SET latin1 COLLATE latin1_spanish_ci */;
 USE `clase`;
 
 -- Volcando estructura para tabla clase.categoria
+DROP TABLE IF EXISTS `categoria`;
 CREATE TABLE IF NOT EXISTS `categoria` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(50) COLLATE latin1_spanish_ci NOT NULL DEFAULT '0',
@@ -27,7 +29,18 @@ CREATE TABLE IF NOT EXISTS `categoria` (
 /*!40000 ALTER TABLE `categoria` DISABLE KEYS */;
 /*!40000 ALTER TABLE `categoria` ENABLE KEYS */;
 
+-- Volcando estructura para tabla clase.hibernate_sequence
+DROP TABLE IF EXISTS `hibernate_sequence`;
+CREATE TABLE IF NOT EXISTS `hibernate_sequence` (
+  `next_val` bigint(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+
+-- Volcando datos para la tabla clase.hibernate_sequence: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `hibernate_sequence` DISABLE KEYS */;
+/*!40000 ALTER TABLE `hibernate_sequence` ENABLE KEYS */;
+
 -- Volcando estructura para tabla clase.person
+DROP TABLE IF EXISTS `person`;
 CREATE TABLE IF NOT EXISTS `person` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `lastname` varchar(50) COLLATE latin1_spanish_ci NOT NULL DEFAULT '0',
@@ -40,11 +53,12 @@ CREATE TABLE IF NOT EXISTS `person` (
 /*!40000 ALTER TABLE `person` ENABLE KEYS */;
 
 -- Volcando estructura para tabla clase.product
+DROP TABLE IF EXISTS `product`;
 CREATE TABLE IF NOT EXISTS `product` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `description` varchar(50) COLLATE latin1_spanish_ci NOT NULL DEFAULT '0',
-  `precio` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `stock` tinyint(3) unsigned NOT NULL DEFAULT '1',
+  `precio` int(10) unsigned NOT NULL DEFAULT '0',
+  `stock` int(10) unsigned NOT NULL DEFAULT '1',
   `id_category` int(10) unsigned NOT NULL DEFAULT '1',
   `name` varchar(50) COLLATE latin1_spanish_ci NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
@@ -57,6 +71,7 @@ CREATE TABLE IF NOT EXISTS `product` (
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 
 -- Volcando estructura para tabla clase.producto_variante
+DROP TABLE IF EXISTS `producto_variante`;
 CREATE TABLE IF NOT EXISTS `producto_variante` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `id_producto` int(10) unsigned NOT NULL DEFAULT '0',
@@ -73,10 +88,12 @@ CREATE TABLE IF NOT EXISTS `producto_variante` (
 /*!40000 ALTER TABLE `producto_variante` ENABLE KEYS */;
 
 -- Volcando estructura para tabla clase.usuario
+DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE IF NOT EXISTS `usuario` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `pass` varchar(50) COLLATE latin1_spanish_ci NOT NULL DEFAULT '0',
-  `edad` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `edad` int(10) unsigned NOT NULL DEFAULT '0',
+  `login` varchar(50) COLLATE latin1_spanish_ci NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 

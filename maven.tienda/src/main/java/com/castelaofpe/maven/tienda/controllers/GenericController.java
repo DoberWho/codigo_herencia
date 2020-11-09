@@ -10,7 +10,7 @@ public abstract class GenericController<T> {
 	 
 	EntityManager entityManager = this.getManager();
 	
-	  abstract T get(long id);
+	  abstract T get(int id);
 	  abstract List<T> getAll();
 	    
 	  abstract void save(T t);

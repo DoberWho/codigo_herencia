@@ -12,17 +12,17 @@ public class Persona {
 	  
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id = 0L;
+	private Integer id = 0;
 	
 	public String name = "";  
 	public String lastname = "";  
 	 	 
 
-	public Long getId() {		
+	public Integer getId() {		
 		return id;
 	} 
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

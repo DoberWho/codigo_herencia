@@ -30,7 +30,7 @@ public class App {
          CategoriaController ctrlCat = new CategoriaController();
          
          // Todos los Objetos
-         Categoria cat = ctrlCat.get(1L);
+         Categoria cat = ctrlCat.get(1);
          List<Producto> lista = ctrl.getByCategoria(cat);
          
          for (Producto prod : lista) {

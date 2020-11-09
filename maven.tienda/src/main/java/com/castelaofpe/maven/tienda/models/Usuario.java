@@ -13,7 +13,7 @@ public class Usuario {
 	 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id = 0L;
+	private Integer id = 0;
 	
 	public String login = "";
 	
@@ -41,10 +41,10 @@ public class Usuario {
 		this.edad = edad;
 	}
  
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	

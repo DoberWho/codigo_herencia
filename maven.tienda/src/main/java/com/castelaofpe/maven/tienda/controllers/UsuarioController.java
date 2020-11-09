@@ -10,7 +10,7 @@ import com.castelaofpe.maven.tienda.models.Usuario;
 public class UsuarioController extends GenericController<Usuario> {
 	 
 	@Override
-	public Usuario get(long id) {
+	public Usuario get(int id) {
 		return (Usuario) entityManager.find(Usuario.class, id);
 	}
 

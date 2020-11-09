@@ -11,7 +11,7 @@ import com.castelaofpe.maven.tienda.models.Producto;
 public class ProductoController extends GenericController<Producto>{
 	 
 	@Override
-	public Producto get(long id) {
+	public Producto get(int id) {
 		return (Producto) entityManager.find(Producto.class, id);
 	}
 
