@@ -20,26 +20,6 @@ public class PersonaController extends GenericController<Persona> {
         return q03.getResultList();
 	}
 
-	@Override
-	public void save(Persona t) {
-		EntityTransaction trans = entityManager.getTransaction();
-		entityManager.persist(t); 
-		trans.commit();
-	}
-
-	@Override
-	public void update(Persona t) { 
-		EntityTransaction trans = entityManager.getTransaction();
-		entityManager.persist(t); 
-		trans.commit();
-		
-	}
-
-	@Override
-	public void delete(Persona t) {
-		EntityTransaction trans = entityManager.getTransaction();
-		entityManager.remove(t); 
-		trans.commit(); 
-	}
+	
 
 }

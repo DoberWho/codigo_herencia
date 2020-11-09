@@ -18,30 +18,7 @@ public class CategoriaController extends GenericController<Categoria> {
 	public List<Categoria> getAll() {
 		Query q03 = entityManager.createQuery("select e from Categoria e");  
         return q03.getResultList();
-	}
-
-	@Override
-	public void save(Categoria t) {
-		EntityTransaction trans = entityManager.getTransaction();
-		entityManager.persist(t); 
-		trans.commit();
-	}
-
-	@Override
-	public void update(Categoria t) { 
-		EntityTransaction trans = entityManager.getTransaction();
-		entityManager.persist(t); 
-		trans.commit();
-		
-	}
-
-	@Override
-	public void delete(Categoria t) {
-		EntityTransaction trans = entityManager.getTransaction();
-		entityManager.remove(t); 
-		trans.commit(); 
-	}
-	
+	} 
 	
 
 }

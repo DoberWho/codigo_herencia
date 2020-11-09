@@ -20,26 +20,5 @@ public class UsuarioController extends GenericController<Usuario> {
         return q03.getResultList();
 	}
 
-	@Override
-	public void save(Usuario t) {
-		EntityTransaction trans = entityManager.getTransaction();
-		entityManager.persist(t); 
-		trans.commit();
-	}
-
-	@Override
-	public void update(Usuario t) { 
-		EntityTransaction trans = entityManager.getTransaction();
-		entityManager.persist(t); 
-		trans.commit();
-		
-	}
-
-	@Override
-	public void delete(Usuario t) {
-		EntityTransaction trans = entityManager.getTransaction();
-		entityManager.remove(t); 
-		trans.commit(); 
-	}
-
+	 
 }
