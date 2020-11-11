@@ -13,6 +13,9 @@ import javax.persistence.Table;
 @Table(name = "cart")
 public class Carrito {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id = 0;
 	
 	@ManyToOne
 	@JoinColumn(name="id_producto", nullable=false)
@@ -47,6 +50,14 @@ public class Carrito {
 
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	
 	

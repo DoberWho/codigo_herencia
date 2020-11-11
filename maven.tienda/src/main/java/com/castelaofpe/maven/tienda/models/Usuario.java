@@ -1,10 +1,15 @@
 package com.castelaofpe.maven.tienda.models;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -20,6 +25,13 @@ public class Usuario {
 	@Column(name="pass")
 	public String password = "";
 	public int edad = 0;
+	
+	@ManyToMany
+	@JoinTable(
+	  name = "mn_categoria_producto", 
+	  joinColumns = @JoinColumn(name = "id_producto"), 
+	  inverseJoinColumns = @JoinColumn(name = "id_categoria"))
+	public List<Carrito> carrito;
 	
 	public String getLogin() {
 		return login;

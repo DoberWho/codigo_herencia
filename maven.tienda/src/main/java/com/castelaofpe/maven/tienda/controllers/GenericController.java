@@ -12,15 +12,26 @@ import com.castelaofpe.maven.tienda.models.Persona;
 
 public abstract class GenericController<T> {
 	 
-	EntityManager entityManager = this.getManager();
+	  static final EntityManager entityManager = getManager();
+	 private static EntityTransaction trans;
 	
 	  abstract T get(int id);
 	  abstract List<T> getAll(); 
 	  	  
-	  private EntityManager getManager() {
+	  private static EntityManager getManager() {
 		  EntityManagerFactory factory = Persistence.createEntityManagerFactory("UD01");
 		  return factory.createEntityManager();
 	  } 
+	  
+	  public EntityTransaction beginTransaction() {
+		  trans = entityManager.getTransaction();
+		  trans.begin();
+		  return trans;
+	  }
+	  
+	  public void commit() {
+		  trans.commit();
+	  }
 	  
 
 		public void save(T t) {
