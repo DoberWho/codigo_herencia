@@ -35,40 +35,15 @@ public class App {
     	ProductoVariantController pVariantCtrl = new ProductoVariantController();
     	CarritoController cartCtrl = new CarritoController();
     	UsuarioController userCtrl = new UsuarioController();
+    	 
+    	 
     	
-    	Usuario user = userCtrl.get(1);
+    	Producto prod = prodCtrl.get(1);
     	
-    	catCtrl.beginTransaction();
+    	System.out.println(prod);   
+    	 
     	
-    	Producto prod02 = new Producto();
-    	prod02.setNombre("Zapatillas de Bailar");
-    	prod02.setDesc("By Los PetterSellers");
-    	prod02.setPrecio(100);
-    	prod02.setStock(10000);
     	
-    	Categoria cat = new Categoria();
-    	cat.setNombre("Zapatillas");
-    	catCtrl.save(cat);
-    	
-    	prod02.categoria = cat;
-    	prodCtrl.save(prod02);    	
-    	
-    	ProductoVariante prodVar = new ProductoVariante();
-    	prodVar.setProducto(prod02);
-    	prodVar.setStock(prod02.getStock());
-    	prodVar.setPrecio(prod02.getPrecio());
-    	prodVar.name = "Molonas";
-    	pVariantCtrl.save(prodVar);
-    	
-    	Carrito itemCart = new Carrito();
-    	itemCart.productoVariante = prodVar;
-    	itemCart.usuario = user;
-    	cartCtrl.save(itemCart);
-    	
-    	userCtrl.commit();
-    	
-    	List<Carrito> carrito = cartCtrl.getByUser(1);
-    	System.out.println(carrito.size()); 
     	
     }
 }

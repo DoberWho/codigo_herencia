@@ -2,6 +2,7 @@ package com.castelaofpe.maven.tienda.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -21,7 +22,7 @@ public class Carrito {
 	@JoinColumn(name="id_producto", nullable=false)
 	public ProductoVariante productoVariante;
 	
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="id_user", nullable=false)
 	public Usuario usuario;
 	
@@ -61,5 +62,7 @@ public class Carrito {
 	}
 	
 	
-
+	public String toString() {
+		return "Item Carrito: "+this.id+" - "+this.productoVariante+" - Amount: "+this.cantidad;
+	}
 }

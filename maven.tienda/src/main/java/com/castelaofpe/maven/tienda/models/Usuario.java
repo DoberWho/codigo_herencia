@@ -25,13 +25,7 @@ public class Usuario {
 	@Column(name="pass")
 	public String password = "";
 	public int edad = 0;
-	
-	@ManyToMany
-	@JoinTable(
-	  name = "mn_categoria_producto", 
-	  joinColumns = @JoinColumn(name = "id_producto"), 
-	  inverseJoinColumns = @JoinColumn(name = "id_categoria"))
-	public List<Carrito> carrito;
+
 	
 	public String getLogin() {
 		return login;
