@@ -68,10 +68,7 @@ public class App {
     	userCtrl.commit();
     	
     	List<Carrito> carrito = cartCtrl.getByUser(1);
-    	System.out.println(carrito.size());
-    	
-    	  
-    	
+    	System.out.println(carrito.size()); 
     	
     }
 }

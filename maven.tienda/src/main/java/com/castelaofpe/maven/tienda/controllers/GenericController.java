@@ -34,25 +34,18 @@ public abstract class GenericController<T> {
 	  }
 	  
 
-		public void save(T t) {
-			EntityTransaction trans = entityManager.getTransaction();
-			entityManager.persist(t); 
-			trans.commit();
+		public void save(T t) { 
+			entityManager.persist(t);  
 		}
 
 
-		public void update(T t) { 
-			EntityTransaction trans = entityManager.getTransaction();
-			entityManager.persist(t); 
-			trans.commit();
-			
+		public void update(T t) {  
+			entityManager.persist(t);  			
 		}
 
 
-		public void delete(T t) {
-			EntityTransaction trans = entityManager.getTransaction();
-			entityManager.remove(t); 
-			trans.commit(); 
+		public void delete(T t) { 
+			entityManager.remove(t);  
 		}
  
 }
